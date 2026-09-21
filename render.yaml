@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: kisan-saathi
+    env: node
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node server/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: VITE_SUPABASE_URL
+        sync: false
+      - key: VITE_SUPABASE_ANON_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: SARVAM_API_KEY
+        sync: false
+      - key: VITE_SARVAM_API_KEY
+        sync: false
+      - key: SARVAM_TELUGU_SPEAKER
+        value: meera
+      - key: SARVAM_TTS_MODEL
+        value: bulbul:v3
+      - key: VAPID_PUBLIC_KEY
+        sync: false
+      - key: VAPID_PRIVATE_KEY
+        sync: false
+      - key: VAPID_EMAIL
+        value: mailto:admin@kisansaathi.gov.in
+      - key: VITE_VAPID_PUBLIC_KEY
+        sync: false

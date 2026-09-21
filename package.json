@@ -8,8 +8,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "server": "node server/index.js",
-    "test:crud": "node server/test-crud.js",
-    "start": "concurrently \"node server/index.js\" \"vite\""
+    "start": "node server/index.js",
+    "dev:all": "concurrently \"node server/index.js\" \"vite\"",
+    "test:crud": "node server/test-crud.js"
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.1",
